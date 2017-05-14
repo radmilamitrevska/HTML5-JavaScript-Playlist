@@ -214,6 +214,8 @@ html[xmlns] .clearfix {
     float: left;
     width: 100%;
     max-width: 500px;
+    position: relative;
+    z-index: 100;
 }
 .playlist-list-container {
     float: left;
