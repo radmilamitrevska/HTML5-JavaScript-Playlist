@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+</head>
+<body>
+<!-- Main container -->
+<div class="page-main-content">
+    <h1>User Playlist </h1>
+    <!-- Left content -->
+    <div class="left-content">
+        <h2>Add new video to playlist</h2>
+        <!-- Form for adding video -->
+        <form class="form" id="addVideoForm" name="addVideoForm" onsubmit="return sendForm(this)">
+            <!-- Form group Artist-->
+            <div class="form-group">
+                <label>Video Artist:</label>
+                <input type="text" required name="vide_artist" class="form-control" placeholder="Add Video Artist"/>
+            </div>
+            <!-- Form group Artist-->
+            <div class="form-group">
+                <label>Video Title:</label>
+                <input type="text" required name="vide_title" class="form-control" placeholder="Add Video Title"/>
+            </div>
+            <!-- Form group Artist-->
+            <div class="form-group">
+                <label>Video URL:</label>
+                <input type="text" required name="vide_title" class="form-control" placeholder="Add Video URL"/>
+            </div>
+            <!-- Form group Submit -->
+            <div class="form-group">
+                <button class="btn submit-btn right-alg">Add video</button>
+            </div>
+        </form>
+        <!-- Button for playlist showing -->
+        <div class="show-playlist">
+            <button class="btn btn-show-playlist center-alg" onclick="showPlaylist()">Show playlist</button>
+        </div>
+    </div>
+    <!-- Right content -->
+    <div class="right-content" id="playlist-container">
+        <!-- Playlist container -->
+        <div class="playlist-outher-container">
+            <video width="100%" height="283" controls id="myVideo" class="playlist-video-container">
+                Your browser does not support the video tag.
+            </video>
+            <div class="playlist-list-container" id="playlist"></div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<script src="js/perfect-scrollbar.min.js"></script>
+<script src="js/playlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* Global style
+ * In this file you should write global roles
+ * Import this file using the following HTML or equivalent:
+*/
+
+/**************************
+*      GENERAL STYLES     *
+**************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: none;
+    text-decoration: none;
+    line-height: 100%;
+    text-align: left;
+    font-family:Roboto;
+    color: #969798;
+    font-size: 14px;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1;
+    background-color: #fff;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:active {
+    outline: none;
+}
+
+* :focus {
+    outline: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+/* Page playlist styles */
+.page-main-content {
+    float: none;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.page-main-content h1 {
+     float: left;
+     width: 100%;
+     text-align: center;
+     font-size: 30px;
+     padding-bottom: 30px;
+ }
+.page-main-content h2 {
+    float: left;
+    width: 100%;
+    font-size: 22px;
+    padding-bottom: 15px
+}
+/* Left content */
+.left-content {
+    float: left;
+    width: 40%;
+    padding: 20px;
+}
+.form-group {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+}
+.form-group label {
+    float: left;
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.form-group .form-control {
+    float: left;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e6e9ee;
+    padding: 10px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #a3a3a3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color:#a3a3a3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #a3a3a3;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color:#a3a3a3;
+}
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 2s;
+}
+.btn.submit-btn {
+    background: #0ead4a;
+}
+.btn.submit-btn:hover {
+    background:#096f2f;
+}
+.btn.btn-show-playlist {
+    background: #b82409;
+}
+.btn.btn-show-playlist:hover {
+    background: #e34e32;
+}
+.btn.right-alg {
+    float: right;
+}
+.btn.center-alg {
+    float: none;
+    display: inline-block;
+}
+.show-playlist {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+/* Right content */
+#playlist-container {
+    display: none;
+}
+.right-content {
+    float: left;
+    width: 60%;
+    padding: 20px;
+}
+.playlist-outher-container {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: #e6e9ee;
+}
+.playlist-video-container {
+    float: left;
+    width: 100%;
+    max-width: 500px;
+}
+.playlist-list-container {
+    float: left;
+    width: 100%;
+    height: 280px;
+    position: relative;
+    margin-left: -500px;
+    padding-left: 500px;
+}
+.playlist-list-container li {
+    float: left;
+    width: 100%;
+    padding: 10px 5px 10px 10px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.playlist-list-container li span{
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    font-size: 11px;
+    text-align: right;
+    color: #000;
+}
+.playlist-list-container li:hover,
+.playlist-list-container li.active {
+    background-color: #b82409;
+    color: #fff;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .left-content {
+        width: 30%;
+    }
+    .right-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 980px) {
+    .left-content {
+        width: 100%;
+    }
+    .right-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .playlist-list-container {
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
